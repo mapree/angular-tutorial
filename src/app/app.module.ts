@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
+import {MatDialogModule} from '@angular/material'; 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
@@ -12,9 +14,12 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { CartService } from './cart.service';
 import { CartComponent } from './cart/cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
+import { WelcomeMessageComponent } from './welcome-message/welcome-message.component';
 
 @NgModule({
   imports: [
+    MatDialogModule,
+    BrowserAnimationsModule,
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
@@ -32,10 +37,12 @@ import { ShippingComponent } from './shipping/shipping.component';
     ProductAlertsComponent,
     ProductDetailsComponent,
     CartComponent,
-    ShippingComponent
+    ShippingComponent,
+    WelcomeMessageComponent
   ],
   bootstrap: [ AppComponent ],
-  providers: [CartService]
+  providers: [CartService],
+  entryComponents: [WelcomeMessageComponent]  
 })
 export class AppModule { }
 
