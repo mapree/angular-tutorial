@@ -11,14 +11,14 @@ export class AppComponent  {
   constructor(private dialog:MatDialog){
   }
 
-  openDialog(){
-    const dialogConfig = new MatDialogConfig();
+  // openDialog(){
+  //   const dialogConfig = new MatDialogConfig();
 
-    dialogConfig.disableClose = true;
-    dialogConfig.autoFocus = true;
+  //   dialogConfig.disableClose = true;
+  //   dialogConfig.autoFocus = true;
 
-    const dialogRef = this.dialog.open(WelcomeMessageComponent, dialogConfig);
-  }
+  //   const dialogRef = this.dialog.open(WelcomeMessageComponent, dialogConfig);
+  // }
 }
 
 
